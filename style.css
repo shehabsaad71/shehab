@@ -796,4 +796,27 @@ model-viewer {
     opacity: 1;
     transform: translate(-50%, 0); /* تحت الشعار بالظبط */
   }
-  
+  #lang-toggle {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: aqua;
+    font-size: 32px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.3s ease;
+  }
+
+  /* شيل الخط تحت لو اتحول لرابط بدل زرار */
+  #lang-toggle:focus,
+  #lang-toggle:visited,
+  #lang-toggle:hover {
+    text-decoration: none;
+    outline: none;
+  }
+
+  /* لايت مود */
+  body.light-mode #lang-toggle {
+    color: #007bff; /* أزرق */
+  }
