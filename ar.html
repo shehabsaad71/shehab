@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shehab Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="images/logo.png" type="images/png">
+</head>
+<body class="dark-mode" dir="ltr">
+  <nav class="navbar">
+    <div class="left">
+      <a href="#" class="logo">شهاب</a>
+    </div>
+    <div class="links">
+        <a href="#contact">تواصل</a>
+        <a href="#projects">مشاريعي</a>
+        <a href="#about">عَنِّْي</a>
+        <a href="#">الرئيسية</a>
+    </div>
+    <div class="right">
+      <button class="toggle-dark">
+        <span class="material-icons">wb_sunny</span>
+      </button>
+      <a href="ar.html" id="lang-toggle">EN</a>
+    </div>
+  </nav>
+
+  <section class="intro">
+    <h2>مرحبا, اسمي:</h2>
+    <h1>شهاب سعد</h1>
+    <p><span class="typing"></span></p>
+    <button class="whoami-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">من انا؟</button>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>عَنِّْي</h2>
+    <p class="about-text">
+        أنا مطور شغوف، ولديّ خبرة في تطوير الألعاب، وتصميم واجهات المستخدم، والنمذجة ثلاثية الأبعاد، وتجربة المستخدم. أستمتع بتجسيد أفكاري الإبداعية باستخدام أكواد واضحة ورسومات جذابة.</p>
+  </section>
+
+  <section class="about-tech">
+    <h2 class="tech-title">التقنيات التي استخدمها:</h2>
+    <div class="tech-container">
+      <div class="tech-item">
+        <img src="images/tech/python.png" alt="Python">
+        <div class="tooltip below">Python</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/gdscript.png" alt="GD Script">
+        <div class="tooltip below">GD Script</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/lua.png" alt="Lua">
+        <div class="tooltip below">Lua</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/html.png" alt="HTML">
+        <div class="tooltip below">HTML</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/css.png" alt="CSS">
+        <div class="tooltip below">CSS</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/javascript.png" alt="JavaScript">
+        <div class="tooltip below">JavaScript</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/typescript.png" alt="TypeScript">
+        <div class="tooltip below">TypeScript</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/bootstrap.png" alt="Bootstrap">
+        <div class="tooltip below">Bootstrap</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/tailwind.png" alt="Tailwind">
+        <div class="tooltip below">Tailwind</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/c.png" alt="C">
+        <div class="tooltip below">C</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/cpp.png" alt="C++">
+        <div class="tooltip below">C++</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/csharp.png" alt="C#">
+        <div class="tooltip below">C#</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/godot.png" alt="Godot">
+        <div class="tooltip below">Godot</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/unity.png" alt="Unity">
+        <div class="tooltip below">Unity</div>
+      </div>
+      <div class="tech-item">
+        <img src="images/tech/Blender.png" alt="Blender">
+        <div class="tooltip below">Blender</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الشهادات -->
+<div class="about-certificates">
+  <h2>الشهادات التي امتلكها:</h2>
+  <div class="certificates">
+    <div class="certificate-item">
+      <div class="image-wrapper">
+        <img src="images/cc/harvard.png" alt="Certificate 1" onclick="openPopup(this)">
+      </div>
+      <div class="tooltip">Harvard CS50</div>
+    </div>
+
+    <div class="certificate-item">
+      <div class="image-wrapper">
+        <img src="images/cc/minecraft-code.png" alt="Certificate 2" onclick="openPopup(this)">
+      </div>
+      <div class="tooltip">Microsoft Minecraft Code</div>
+    </div>
+  </div>
+</div>
+
+<!-- popup -->
+<div id="popup" class="popup">
+  <span class="close-icon material-icons" onclick="closePopup()">close</span>
+  <img id="popup-img" src="" alt="popup">
+</div>
+
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<script>
+  function openPopup(img) {
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+    popupImg.src = img.src;
+    popup.style.display = "flex";
+  }
+
+  function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+  }
+</script>
+<h2 id="projects" class="projects">مشاريعي</h2>
+<h2 class="games-title">العابي</h2>
+
+<div class="games-wrapper">
+  <a href="https://shehab-dev-7.itch.io/football-simulator" class="game-item" target="_blank">
+    <img src="images/games/football.png" alt="Game 1">
+    <div class="tooltip">Football Simulator</div>
+  </a>
+  <a href="https://shehab-dev-7.itch.io" class="game-item" target="_blank">
+    <img src="images/games/itch.png" alt="Game 2">
+    <div class="tooltip">كل الالعاب</div>
+  </a>
+  <a href="https://shehab-dev-7.itch.io/pekka-kana" class="game-item" target="_blank">
+    <img src="images/games/pekke-kana.png" alt="Pekka Kana">
+    <div class="tooltip">Pekka Kana</div>
+  </a>
+</div>
+
+<h2 class="games-title">مواقعي</h2>
+<div class="games-wrapper">
+  <a href="https://emogo.org" class="game-item" target="_blank">
+    <img src="images/web/emogo.png" alt="Game 1">
+    <div class="tooltip">Emogo, emojis&symbols</div>
+  </a>
+  <a href="https://shehabsaad71.github.io/online-shop" class="game-item" target="_blank">
+    <img src="images/web/online-shop.png" alt="Game 2">
+    <div class="tooltip">Online Shop Demo</div>
+  </a>
+  <a href="https://shehabsaad71.github.io/blog" class="game-item" target="_blank">
+    <img src="images/web/blog.png" alt="Pekka Kana">
+    <div class="tooltip">Blog Demo</div>
+  </a>
+  <a href="https://shehabsaad71.github.io/portfolio" class="game-item" target="_blank">
+    <img src="images/web/portfolio.png" alt="Pekka Kana">
+    <div class="tooltip">Portfolio Demo</div>
+  </a>
+</div>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!-- My 3D Models Section -->
+<section class="about-3dmodels">
+  <h2 class="models-title">مجسماتي ثلاثية الابعاد</h2>
+  <div class="models-container">
+    <div class="model-item">
+      <model-viewer src="3d-models/forest-man.glb" alt="Model 1" auto-rotate camera-controls></model-viewer>
+      <div class="tooltip">رجل الغابة</div>
+    </div>
+    <a href="https://sketchfab.com/fuuytf1" class="model-item" target="_blank">
+      <img src="images/sketchfab.png" alt="Pekka Kana">
+      <div class="tooltip">جميع المجسمات</div>
+    </a>
+    <div class="model-item">
+      <model-viewer src="3d-models/feature-ninja.glb" alt="Model 2" auto-rotate camera-controls></model-viewer>
+      <div class="tooltip">نينجا مستقبلي</div>
+    </div>
+    <!-- زود أي مجسمات تانية هنا بنفس الشكل -->
+  </div>
+</section>
+
+
+
+<!-- Contact Me Section -->
+<section class="contact-me-section">
+  <h2 id="contact" class="contact-title">تواصل معي</h2>
+  <div class="contact-frame">
+    <a href="mailto:fuuytf1@gmail.com" class="contact-email">fuuytf1@gmail.com</a>
+
+    <div class="social-icons">
+      <div class="icon-wrapper">
+        <a href="https://youtube.com/@shehab_dev_7" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <span class="tooltip">YouTube</span>
+      </div>
+      <div class="icon-wrapper">
+        <a href="https://x.com/shehab_dev" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <span class="tooltip">Twitter</span>
+      </div>
+      <div class="icon-wrapper">
+        <a href="https://instagram.com/sheha_3mk" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <span class="tooltip">Instagram</span>
+      </div>
+      <div class="icon-wrapper">
+        <a href="https://tiktok.com/@shehab_saad" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <span class="tooltip">TikTok</span>
+      </div>
+      <div class="icon-wrapper">
+        <a href="https://github.com/shehabsaad71" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <span class="tooltip">GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="ar.js"></script>
+</body>
+</html>
