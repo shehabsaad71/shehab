@@ -9,8 +9,19 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="images/logo.png" type="images/png">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // مدة الحركة (بالملي ثانية)
+    once: true      // الحركة تظهر مرة واحدة بس
+  });
+</script>
 <body class="dark-mode" dir="ltr">
+  <div id="particles-js"></div>
   <nav class="navbar">
     <div class="left">
       <a href="#" class="logo">SS</a>
@@ -22,9 +33,7 @@
         <a href="#contact">Contact</a>
     </div>
     <div class="right">
-      <button class="toggle-dark">
-        <span class="material-icons">wb_sunny</span>
-      </button>
+
       <a href="ar.html" id="lang-toggle">AR</a>
     </div>
   </nav>
@@ -44,73 +53,74 @@
   </section>
 
   <section class="about-tech">
-    <h2 class="tech-title">The tech I use:</h2>
+    <h2 class="tech-title" data-aos="fade-up">The tech I use:</h2>
     <div class="tech-container">
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="100">
         <img src="images/tech/python.png" alt="Python">
         <div class="tooltip below">Python</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="200">
         <img src="images/tech/gdscript.png" alt="GD Script">
         <div class="tooltip below">GD Script</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="300">
         <img src="images/tech/lua.png" alt="Lua">
         <div class="tooltip below">Lua</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="400">
         <img src="images/tech/html.png" alt="HTML">
         <div class="tooltip below">HTML</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="500">
         <img src="images/tech/css.png" alt="CSS">
         <div class="tooltip below">CSS</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="600">
         <img src="images/tech/javascript.png" alt="JavaScript">
         <div class="tooltip below">JavaScript</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="700">
         <img src="images/tech/typescript.png" alt="TypeScript">
         <div class="tooltip below">TypeScript</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="800">
         <img src="images/tech/bootstrap.png" alt="Bootstrap">
         <div class="tooltip below">Bootstrap</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="900">
         <img src="images/tech/tailwind.png" alt="Tailwind">
         <div class="tooltip below">Tailwind</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1000">
         <img src="images/tech/c.png" alt="C">
         <div class="tooltip below">C</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1100">
         <img src="images/tech/cpp.png" alt="C++">
         <div class="tooltip below">C++</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1200">
         <img src="images/tech/csharp.png" alt="C#">
         <div class="tooltip below">C#</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1300">
         <img src="images/tech/godot.png" alt="Godot">
         <div class="tooltip below">Godot</div>
       </div>
-      <div class="tech-item">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1400">
         <img src="images/tech/unity.png" alt="Unity">
         <div class="tooltip below">Unity</div>
       </div>
-      <div class="tech-item">
-        <img src="images/tech/blender.png" alt="Blender">
+      <div class="tech-item" data-aos="fade-up" data-aos-delay="1500">
+        <img src="images/tech/Blender.png" alt="Blender">
         <div class="tooltip below">Blender</div>
       </div>
     </div>
   </section>
 
+
   <!-- الشهادات -->
-<div class="about-certificates">
+<div class="about-certificates" data-aos="fade-up">
   <h2>The certificates I have:</h2>
   <div class="certificates">
     <div class="certificate-item">
@@ -155,7 +165,7 @@
 <h2 id="projects" class="projects">My Projects</h2>
 <h2 class="games-title">My Games</h2>
 
-<div class="games-wrapper">
+<div class="games-wrapper" data-aos="fade-up">
   <a href="https://shehab-dev-7.itch.io/football-simulator" class="game-item" target="_blank">
     <img src="images/games/football.png" alt="Game 1">
     <div class="tooltip">Football Simulator</div>
@@ -214,7 +224,7 @@
 
 
 <!-- Contact Me Section -->
-<section class="contact-me-section">
+<section class="contact-me-section" data-aos="fade-up">
   <h2 id="contact" class="contact-title">Contact Me</h2>
   <div class="contact-frame">
     <a href="mailto:fuuytf1@gmail.com" class="contact-email">fuuytf1@gmail.com</a>
@@ -253,7 +263,92 @@
     </div>
   </div>
 </section>
+<script>
+  // تهيئة particles.js باستخدام اللون من CSS variable
+  function initParticles() {
+    // جلب اللون الحالي من الـ CSS variable
+    const particleColor = getComputedStyle(document.documentElement).getPropertyValue('--particle-color').trim();
 
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": particleColor }, // استخدام اللون من CSS variable
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": particleColor, // نفس اللون للجزيئات المرتبطة
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 3,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  }
+
+  // التحقق عند تحميل الصفحة
+  document.addEventListener('DOMContentLoaded', function() {
+    initParticles(); // تهيئة الجزيئات عند تحميل الصفحة
+
+    // تهيئة AOS (حركات عند التمرير)
+    AOS.init({
+      duration: 1000, // مدة الحركة
+      once: true,     // الحركة تظهر مرة واحدة فقط
+    });
+  });
+
+  // إذا قمت بتبديل الوضع بين Light و Dark
+  const modeToggle = document.querySelector('#mode-toggle'); // تأكد من وجود الزر
+  modeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+    document.body.classList.toggle('dark-mode');
+    initParticles(); // إعادة تهيئة الجزيئات مع اللون الجديد
+  });
+</script>
   <script src="script.js"></script>
+  
+  
+  <footer class="footer">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <p>© 2025 Shehab Saad. All rights reserved.</p>
+  </footer>
+  
 </body>
 </html>
