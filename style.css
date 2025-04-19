@@ -907,4 +907,86 @@ model-viewer {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
+/* يخلي الفيديو يغطي الشاشة */
+#video-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 9999;
+    overflow: hidden;
+  }
   
+  #video-intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* إخفاء المحتوى في البداية */
+  .hidden {
+    display: none;
+  }
+  
+  /* مثال بسيط للtypewriter */
+  .typewriter {
+    font-family: monospace;
+    font-size: 40px;
+    color: aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid aqua;
+    width: 0;
+    animation:
+      typing 2s steps(7, end) forwards,
+      blink 0.75s step-end infinite alternate;
+    animation-delay: 0s; /* هتتغير بالـ JS */
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 7ch }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+  .cv-button {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .cv-button:hover {
+    transform: scale(1.2);
+  }
+
+  .cv-tooltip {
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background-color: #222;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .cv-button:hover .cv-tooltip {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+
+  .material-icons {
+    font-size: 24px;
+    color: white;
+  }
