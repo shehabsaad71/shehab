@@ -14,3 +14,8 @@ function typeText() {
 }
 
 window.onload = typeText;
+document.getElementById('menu-toggle').addEventListener('click', function() {
+  const navbarLinks = document.getElementById('navbar-links');
+  navbarLinks.classList.toggle('active');
+});
+
