@@ -11,6 +11,8 @@
   <link rel="icon" href="images/logo.png" type="images/png">
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -20,6 +22,7 @@
     once: true      // الحركة تظهر مرة واحدة بس
   });
 </script>
+
 <body class="dark-mode" dir="ltr">
   <div id="particles-js"></div>
   <nav class="navbar">
@@ -27,28 +30,33 @@
       <a href="#" class="logo">شهاب</a>
     </div>
     <div class="links">
-        <a href="#contact">تواصل</a>
-        <a href="#projects">مشاريعي</a>
-        <a href="#about">عَنِّْي</a>
-        <a href="#">الرئيسية</a>
+      <a href="#contact">تواصل</a>
+      <a href="#projects">مشاريعي</a>
+      <a href="#about">عَنِّْي</a>
     </div>
     <div class="right">
-
-      <a href="index.html" id="lang-toggle">EN</a>
+      <!-- زر اللغة -->
+      <a class="ln" href="ar.html" id="lang-toggle">EN</a>
+  
+      <!-- زر الـ CV -->
+      <a href="/path/to/your-cv.pdf" download class="cv-button">
+        <span class="material-icons">description</span>
+        <span class="cv-tooltip">CV</span>
+      </a>
     </div>
   </nav>
 
   <section class="intro">
-    <h2>مرحبا, اسمي</h2>
+    <h2>مرحبا, اسمي:</h2>
     <h1>شهاب سعد</h1>
     <p><span class="typing"></span></p>
-    <button class="whoami-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">من انا?</button>
+    <button class="whoami-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Who am I?</button>
   </section>
 
   <section id="about" class="about-section">
     <h2>عَنِّْي</h2>
     <p class="about-text">
-    انا مطور شغوف، ولديّ خبرة في تطوير الألعاب، وتصميم واجهات المستخدم، والنمذجة ثلاثية الأبعاد، وتجربة المستخدم. أستمتع بتجسيد أفكاري الإبداعية باستخدام أكواد واضحة ورسومات جذابة.
+      انا مطور شغوف، ولديّ خبرة في تطوير الألعاب، وتصميم واجهات المستخدم، والنمذجة ثلاثية الأبعاد، وتجربة المستخدم. أستمتع بتجسيد أفكاري الإبداعية باستخدام أكواد واضحة ورسومات جذابة.
     </p>
   </section>
 
@@ -203,7 +211,7 @@
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <!-- My 3D Models Section -->
 <section class="about-3dmodels">
-  <h2 class="models-title">مجسماتي</h2>
+  <h2 class="models-title">مجسماتي ثلاثية الابعاد</h2>
   <div class="models-container">
     <div class="model-item">
       <model-viewer src="3d-models/forest-man.glb" alt="Model 1" auto-rotate camera-controls></model-viewer>
@@ -350,5 +358,6 @@
     <p>شهاب سعد. جميع الحقوق محفوظة 2025©</p>
   </footer>
   
+    
 </body>
 </html>
