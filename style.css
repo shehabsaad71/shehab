@@ -75,6 +75,18 @@ html {
     transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .links a {
+      font-size: 16px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .links a {
+      font-size: 14px;
+  }
+}
+
 .links a:hover {
     color: blue;
 }
@@ -830,6 +842,17 @@ model-viewer {
     border-radius: 6px;
     transition: color 0.3s ease;
   }
+  @media (max-width: 768px) {
+  .lang-toggle {
+      font-size: 16px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .lang-toggle {
+      font-size: 14px;
+  }
+}
 
   /* شيل الخط تحت لو اتحول لرابط بدل زرار */
   #lang-toggle:focus,
