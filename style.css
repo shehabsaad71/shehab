@@ -49,6 +49,18 @@ html {
     transition: 0.5s;
 }
 
+@media (max-width: 768px) {
+  .logo {
+      font-size: 21px;
+  }
+}
+  
+@media (max-width: 480px) {
+  .logo {
+      font-size: 19px;
+  }
+}
+
 .right button {
     background: none;
     border: none;
@@ -80,7 +92,7 @@ html {
       font-size: 16px;
   }
 }
-  
+
 @media (max-width: 480px) {
   .links a {
       font-size: 14px;
@@ -842,17 +854,18 @@ model-viewer {
     border-radius: 6px;
     transition: color 0.3s ease;
   }
+
   @media (max-width: 768px) {
-  .lang-toggle {
-      font-size: 16px;
+    #lang-toggle {
+        font-size: 21px;
+    }
   }
-}
   
-@media (max-width: 480px) {
-  .lang-toggle {
-      font-size: 14px;
+  @media (max-width: 480px) {
+    #lang-toggle {
+        font-size: 19px;
+    }
   }
-}
 
   /* شيل الخط تحت لو اتحول لرابط بدل زرار */
   #lang-toggle:focus,
