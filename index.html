@@ -787,4 +787,1083 @@
         }
 
         .about-card {
-            padding: 30
+            padding: 30px;
+        }
+
+        .about-card h3 {
+            font-size: 20px;
+            margin-bottom: 13px;
+        }
+
+        .about-card > p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .info-list {
+            display: grid;
+            gap: 0;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 15px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            font-size: 13px;
+        }
+
+        .info-row span:first-child {
+            color: var(--muted);
+        }
+
+        .info-row span:last-child {
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+
+            padding: 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 15px;
+
+            transition:
+                transform .2s ease,
+                border-color .2s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .skill-icon {
+            width: 42px;
+            height: 42px;
+
+            flex: 0 0 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            color: var(--primary);
+
+            background:
+                rgba(14,165,233,.08);
+
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .skill-text strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .skill-text small {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =====================================================
+           PROJECT FILTER
+           ===================================================== */
+
+        .project-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 9px 15px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 999px;
+
+            color: var(--muted);
+            background: var(--surface);
+
+            cursor: pointer;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition:
+                color .2s ease,
+                background .2s ease,
+                border-color .2s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            color: white;
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* =====================================================
+           PROJECT GRID
+           ===================================================== */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .project-card {
+            overflow: hidden;
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                opacity .2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color:
+                rgba(14,165,233,.4);
+        }
+
+        .project-image {
+            height: 180px;
+
+            display: grid;
+            place-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(14,165,233,.13),
+                    rgba(6,182,212,.04)
+                );
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .project-icon {
+            width: 82px;
+            height: 82px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 24px;
+
+            font-size: 38px;
+
+            background:
+                rgba(255,255,255,.55);
+
+            border:
+                1px solid var(--border);
+
+            box-shadow:
+                0 20px 40px
+                rgba(14,165,233,.1);
+        }
+
+        body.dark .project-icon {
+            background:
+                rgba(255,255,255,.04);
+        }
+
+        .project-body {
+            padding: 24px;
+        }
+
+        .project-body h3 {
+            font-size: 19px;
+            margin-bottom: 11px;
+        }
+
+        .project-body p {
+            color: var(--muted);
+
+            font-size: 13px;
+            line-height: 1.75;
+
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            padding: 6px 9px;
+
+            border-radius: 7px;
+
+            color: var(--primary);
+
+            background:
+                rgba(14,165,233,.07);
+
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .project-link {
+            flex: 1;
+
+            padding: 10px;
+
+            text-align: center;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 10px;
+
+            color: var(--text);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            transition:
+                color .2s ease,
+                border-color .2s ease,
+                background .2s ease;
+        }
+
+        .project-link:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background:
+                rgba(14,165,233,.05);
+        }
+
+        /* =====================================================
+           CERTIFICATES
+           ===================================================== */
+
+        .cert-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .cert-card {
+            padding: 26px;
+        }
+
+        .cert-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 25px;
+        }
+
+        .cert-logo {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 14px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--primary-dark)
+                );
+
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .cert-year {
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .cert-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .cert-card p {
+            color: var(--muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .verify {
+            display: inline-flex;
+            align-items: center;
+
+            color: var(--primary);
+
+            font-size: 12px;
+            font-weight: 900;
+
+            cursor: pointer;
+        }
+
+        .verify:hover {
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           CERTIFICATE MODAL
+           ===================================================== */
+
+        .certificate-modal {
+            position: fixed;
+            inset: 0;
+
+            z-index: 5000;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                clamp(10px, 3vw, 35px);
+
+            visibility: hidden;
+            opacity: 0;
+
+            transition:
+                opacity .25s ease,
+                visibility .25s ease;
+        }
+
+        .certificate-modal.open {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .certificate-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                rgba(0,0,0,.82);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            cursor: pointer;
+        }
+
+        .certificate-window {
+            position: relative;
+
+            z-index: 2;
+
+            width:
+                min(
+                    96vw,
+                    1500px
+                );
+
+            height:
+                min(
+                    94vh,
+                    1100px
+                );
+
+            display: flex;
+
+            padding: 14px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.14);
+
+            border-radius:
+                clamp(12px, 2vw, 24px);
+
+            background:
+                #080d11;
+
+            box-shadow:
+                0 40px 120px
+                rgba(0,0,0,.65);
+
+            transform:
+                scale(.96)
+                translateY(10px);
+
+            transition:
+                transform .25s ease;
+        }
+
+        .certificate-modal.open
+        .certificate-window {
+            transform:
+                scale(1)
+                translateY(0);
+        }
+
+        .certificate-close {
+            position: absolute;
+
+            z-index: 10;
+
+            top: 10px;
+            left: 10px;
+
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            color: white;
+
+            background:
+                rgba(0,0,0,.72);
+
+            border:
+                1px solid
+                rgba(255,255,255,.2);
+
+            font-size: 29px;
+            line-height: 1;
+
+            cursor: pointer;
+
+            transition:
+                background .2s ease,
+                transform .2s ease;
+        }
+
+        .certificate-close:hover {
+            background:
+                rgba(239,68,68,.85);
+
+            transform: rotate(90deg);
+        }
+
+        .certificate-content {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: auto;
+
+            border-radius:
+                clamp(8px, 1vw, 16px);
+
+            background:
+                #111820;
+        }
+
+        .certificate-image {
+            max-width: 100%;
+            max-height: 100%;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            margin: auto;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0,0,0,.35);
+        }
+
+        .certificate-pdf {
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+
+            background: white;
+        }
+
+        /* =====================================================
+           3D MODELS
+           ===================================================== */
+
+        .models-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .model-card {
+            overflow: hidden;
+        }
+
+        .model-view {
+            width: 100%;
+            height: 340px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(14,165,233,.1),
+                    transparent 65%
+                );
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 100%;
+
+            --poster-color: transparent;
+
+            background:
+                transparent;
+        }
+
+        .model-info {
+            padding: 22px;
+        }
+
+        .model-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .model-info p {
+            color: var(--muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           CV
+           ===================================================== */
+
+        .cv-section {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr .9fr;
+
+            gap: 24px;
+        }
+
+        .cv-card {
+            padding: 35px;
+        }
+
+        .cv-card h3 {
+            font-size: 34px;
+            margin-bottom: 14px;
+        }
+
+        .cv-card > p {
+            color: var(--muted);
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+        .cv-points {
+            display: grid;
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        .cv-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .cv-point-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(14,165,233,.15);
+            color: var(--primary);
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content,
+            .about-grid,
+            .cv-section {
+                grid-template-columns: 1fr;
+            }
+            .projects-grid,
+            .cert-grid,
+            .models-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stat {
+                border-bottom: 1px solid var(--border);
+            }
+            .stat:nth-child(2) {
+                border-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-btn {
+                display: grid;
+            }
+            .projects-grid,
+            .cert-grid,
+            .models-grid,
+            .stats-grid,
+            .skills {
+                grid-template-columns: 1fr;
+            }
+            .stat {
+                border-left: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="grid"></div>
+        <div class="orb one"></div>
+        <div class="orb two"></div>
+        <div class="orb three"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-mark">
+                    <img src="images/logo.png" alt="Logo" onerror="this.style.display='none'; this.parentNode.innerText='S';">
+                </div>
+                <div>شهاب <span>سعد</span></div>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about" class="active" data-i18n="nav_about">عني</a>
+                <a href="#projects" data-i18n="nav_projects">المشاريع</a>
+                <a href="#certificates" data-i18n="nav_certificates">الشهادات</a>
+                <a href="#models" data-i18n="nav_models">نماذج 3D</a>
+                <a href="#cv" data-i18n="nav_cv">السيرة الذاتية</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" title="تغيير الثيم">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div>
+                <div class="badge">
+                    <span class="status-dot"></span>
+                    <span data-i18n="hero_badge">متاح للمشاريع والعمل الحر</span>
+                </div>
+
+                <h1 data-i18n="hero_title">
+                    أبني تجارب برمجية <span class="gradient-text">مبتكرة</span> وحلول متكاملة.
+                </h1>
+
+                <p class="hero-description" data-i18n="hero_desc">
+                    مطور برمجيات وطالب علوم حاسب، متخصص في تطوير الألعاب، تصميم الواجهات، والنمذجة ثلاثية الأبعاد.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">استكشف أعمالي</a>
+                    <a href="#cv" class="btn btn-secondary" data-i18n="hero_btn_cv">السيرة الذاتية</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="profile-code">
+                        const <span class="blue">developer</span> = {<br>
+                        &nbsp;&nbsp;name: <span class="blue">'Shehab Saad'</span>,<br>
+                        &nbsp;&nbsp;role: <span class="blue">'Software Developer'</span>,<br>
+                        &nbsp;&nbsp;passion: <span class="blue">'Building Great Stuff'</span><br>
+                        };
+                    </div>
+                    <div class="profile-avatar">
+                        <img src="images/logo.png" alt="Shehab Saad" onerror="this.style.display='none'; this.parentNode.innerText='SS';">
+                    </div>
+                    <div class="profile-bottom">
+                        <div>
+                            <strong>شهاب سعد</strong>
+                            <small data-i18n="profile_role">مطور برمجيات & مصمم</small>
+                        </div>
+                        <small class="blue" data-i18n="profile_status">نشط الآن</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="container stats">
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-number">+15</div>
+                <div class="stat-label" data-i18n="stat_projects">مشروع مكتمل</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">+3</div>
+                <div class="stat-label" data-i18n="stat_experience">سنوات خبرة</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">+5</div>
+                <div class="stat-label" data-i18n="stat_certs">شهادات معتمدة</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-i18n="stat_commitment">التزام وجودة</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="about_eyebrow">نبذة عني</span>
+                <h2 data-i18n="about_title">نظرة عامة على مهاراتي وشغفي</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="card about-card">
+                    <h3 data-i18n="about_card_title">من أنا؟</h3>
+                    <p data-i18n="about_card_desc">طالب علوم حاسب ومطور شغوف ببناء تطبيقات الألعاب، واجهات المستخدم الجذابة، والنماذج ثلاثية الأبعاد التي تترك انطباعاً مميزاً.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-row">
+                            <span data-i18n="info_name">الاسم:</span>
+                            <span>شهاب سعد</span>
+                        </div>
+                        <div class="info-row">
+                            <span data-i18n="info_field">المجال:</span>
+                            <span data-i18n="info_field_val">علوم الحاسب وتطوير البرمجيات</span>
+                        </div>
+                        <div class="info-row">
+                            <span data-i18n="info_specialty">التخصص:</span>
+                            <span data-i18n="info_specialty_val">تطوير الألعاب والويب و 3D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <div class="skill card">
+                        <div class="skill-icon">💻</div>
+                        <div class="skill-text">
+                            <strong>تطوير الويب</strong>
+                            <small>HTML, CSS, JavaScript</small>
+                        </div>
+                    </div>
+                    <div class="skill card">
+                        <div class="skill-icon">🎮</div>
+                        <div class="skill-text">
+                            <strong>تطوير الألعاب</strong>
+                            <small>Game Mechanics, Canvas</small>
+                        </div>
+                    </div>
+                    <div class="skill card">
+                        <div class="skill-icon">🎨</div>
+                        <div class="skill-text">
+                            <strong>تصميم UI/UX</strong>
+                            <small>Interface Design</small>
+                        </div>
+                    </div>
+                    <div class="skill card">
+                        <div class="skill-icon">🧊</div>
+                        <div class="skill-text">
+                            <strong>نمذجة 3D</strong>
+                            <small>3D Models & Assets</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="projects_eyebrow">معرض الأعمال</span>
+                <h2 data-i18n="projects_title">مشاريع تم بناؤها بشغف</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-icon">🕹️</div>
+                    </div>
+                    <div class="project-body">
+                        <h3>CyberFlip</h3>
+                        <p data-i18n="proj_cyberflip_desc">لعبة أركيد للهواتف تتميز بطابع نيون وأزرار تحكم استجابية مع توليد عشوائي للعقبات.</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML5 Canvas</span>
+                            <span class="tag">Game Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-icon">🌐</div>
+                    </div>
+                    <div class="project-body">
+                        <h3>2D Infinite Survival World</h3>
+                        <p data-i18n="proj_survival_desc">عالم بقاء لانهائي منظور من الأعلى مبني داخل ملف HTML واحد بتقنية seeded procedural generation.</p>
+                        <div class="tags">
+                            <span class="tag">Procedural Gen</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">Single File</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card project-card">
+                    <div class="project-image">
+                        <div class="project-icon">✨</div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Interactive Web App</h3>
+                        <p data-i18n="proj_webapp_desc">تطبيق ويب تفاعلي يعرض واجهات حديثة وتجربة غنية للمستخدم مع دعم الأنظمة المختلفة.</p>
+                        <div class="tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="cert_eyebrow">الاعتمادات</span>
+                <h2 data-i18n="cert_title">الشهادات والدورات التدريبية</h2>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Microsoft Cert -->
+                <div class="card cert-card">
+                    <div class="cert-top">
+                        <div class="cert-logo">MS</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                    <h3 data-i18n="cert_ms_title">شهادة ميكروسوفت</h3>
+                    <p data-i18n="cert_ms_desc">شهادة متخصصة في الذكاء الاصطناعي (AI) وتقنيات الحوسبة المتقدمة.</p>
+                    <a href="microsoft.pdf" target="_self" class="verify" data-i18n="cert_btn_view">عرض الشهادة ←</a>
+                </div>
+
+                <!-- IBM Cert -->
+                <div class="card cert-card">
+                    <div class="cert-top">
+                        <div class="cert-logo" style="background: linear-gradient(135deg, #1f70c1, #084a91);">IBM</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                    <h3 data-i18n="cert_ibm_title">شهادة IBM</h3>
+                    <p data-i18n="cert_ibm_desc">شهادة معتمدة في أساسيات تطوير الويب والتقنيات الحديثة.</p>
+                    <span class="verify" onclick="openCertificateModal('images/ibm.png', 'image')" data-i18n="cert_btn_view">عرض الشهادة ←</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D MODELS -->
+    <section id="models">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow" data-i18n="models_eyebrow">التصميم ثلاثي الأبعاد</span>
+                <h2 data-i18n="models_title">معرض النماذج ثلاثية الأبعاد</h2>
+            </div>
+
+            <div class="models-grid">
+                <div class="card model-card">
+                    <div class="model-view">
+                        <model-viewer src="models/model1.glb" auto-rotate camera-controls alternative-dimensions poster="images/poster1.png"></model-viewer>
+                    </div>
+                    <div class="model-info">
+                        <h3 data-i18n="model1_title">نموذج ثلاثي الأبعاد 1</h3>
+                        <p data-i18n="model1_desc">تصميم ثلاثي الأبعاد تفاعلي يمكن تدويره واستكشافه من كافة الزوايا.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+        <div class="container">
+            <div class="cv-section">
+                <div class="card cv-card">
+                    <h3 data-i18n="cv_title">السيرة الذاتية</h3>
+                    <p data-i18n="cv_desc">استعرض تفاصيل خبراتي الأكاديمية والمهنية ومهاراتي التقنية الكاملة.</p>
+
+                    <div class="cv-points">
+                        <div class="cv-point">
+                            <div class="cv-point-icon">✓</div>
+                            <span data-i18n="cv_p1">خبرة في برمجة وتطوير الألعاب والويب</span>
+                        </div>
+                        <div class="cv-point">
+                            <div class="cv-point-icon">✓</div>
+                            <span data-i18n="cv_p2">معرفة قوية بأساسيات علوم الحاسب والخوارزميات</span>
+                        </div>
+                        <div class="cv-point">
+                            <div class="cv-point-icon">✓</div>
+                            <span data-i18n="cv_p3">تصميم واجهات وتجارب مستخدم احترافية</span>
+                        </div>
+                    </div>
+
+                    <a href="cv.pdf" target="_blank" class="btn btn-primary" data-i18n="cv_download">تحميل السيرة الذاتية (PDF)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATE MODAL -->
+    <div class="certificate-modal" id="certificateModal">
+        <div class="certificate-overlay" onclick="closeCertificateModal()"></div>
+        <div class="certificate-window">
+            <button class="certificate-close" onclick="closeCertificateModal()" title="إغلاق">&times;</button>
+            <div class="certificate-content" id="certificateModalContent">
+                <!-- Modal content dynamically generated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            const isDark = document.body.classList.contains('dark');
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+
+        // Certificate Modal Functions
+        function openCertificateModal(fileUrl, type) {
+            const modal = document.getElementById('certificateModal');
+            const content = document.getElementById('certificateModalContent');
+            content.innerHTML = '';
+
+            if (type === 'pdf') {
+                const iframe = document.createElement('iframe');
+                iframe.src = fileUrl;
+                iframe.className = 'certificate-pdf';
+                content.appendChild(iframe);
+            } else {
+                const img = document.createElement('img');
+                img.src = fileUrl;
+                img.className = 'certificate-image';
+                img.alt = 'Certificate Image';
+                content.appendChild(img);
+            }
+
+            modal.classList.add('open');
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            modal.classList.remove('open');
+            setTimeout(() => {
+                document.getElementById('certificateModalContent').innerHTML = '';
+            }, 300);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCertificateModal();
+        });
+    </script>
+</body>
+
+</html>
