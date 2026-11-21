@@ -2303,6 +2303,451 @@
     color: var(--primary);
     border-color: var(--primary);
 }
+
+        
+/* =========================================
+   FEATURED PROJECTS
+========================================= */
+
+.featured-projects-section {
+    margin-bottom: 90px;
+}
+
+.featured-heading {
+    margin-bottom: 30px;
+}
+
+.featured-heading h2,
+.all-projects-heading h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin: 10px 0;
+    letter-spacing: -1px;
+}
+
+.featured-heading p,
+.all-projects-heading p {
+    color: var(--text-secondary, #888);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.featured-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.featured-project-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 190px;
+    padding: 28px;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 24px;
+    border: 1px solid var(--border-color, rgba(255,255,255,0.08));
+    background: var(--card-bg, rgba(255,255,255,0.03));
+    text-decoration: none;
+    color: inherit;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.featured-project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(255,255,255,0.2);
+    background: var(--card-hover, rgba(255,255,255,0.055));
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+}
+
+.featured-project-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+    font-size: 2.2rem;
+    background: rgba(255,255,255,0.055);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.35s ease;
+}
+
+.featured-project-card:hover .featured-project-icon {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.featured-project-info {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-project-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--accent-color, #8b5cf6);
+}
+
+.featured-project-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.featured-project-info p {
+    margin: 0;
+    max-width: 420px;
+    color: var(--text-secondary, #888);
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+.featured-project-arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--text-secondary, #888);
+    background: rgba(255,255,255,0.045);
+    font-size: 1.2rem;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease;
+}
+
+.featured-project-card:hover .featured-project-arrow {
+    transform: translate(4px, -4px);
+    color: var(--text-color, #fff);
+    background: rgba(255,255,255,0.1);
+}
+
+
+/* FEATURED PROJECT ACCENTS */
+
+.featured-gameverse {
+    --project-accent: #7c5cff;
+}
+
+.featured-vora {
+    --project-accent: #d9a441;
+}
+
+.featured-lamma {
+    --project-accent: #38bdf8;
+}
+
+.featured-connect {
+    --project-accent: #34d399;
+}
+
+.featured-benaa {
+    --project-accent: #f59e0b;
+}
+
+.featured-project-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 220px;
+    height: 220px;
+    right: -90px;
+    bottom: -120px;
+    border-radius: 50%;
+    background: var(--project-accent, #8b5cf6);
+    opacity: 0.09;
+    filter: blur(65px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.featured-project-card:hover::before {
+    opacity: 0.2;
+    transform: scale(1.35);
+}
+
+.featured-project-card .featured-project-label {
+    color: var(--project-accent, #8b5cf6);
+}
+
+.featured-project-card .featured-project-icon {
+    box-shadow: inset 0 0 30px color-mix(in srgb, var(--project-accent, #8b5cf6) 8%, transparent);
+}
+
+
+/* =========================================
+   BENAA - COMING SOON FEATURED
+========================================= */
+
+.coming-soon-card {
+    cursor: default;
+    border-color: rgba(245,158,11,0.14);
+}
+
+.coming-soon-card:hover {
+    border-color: rgba(245,158,11,0.35);
+}
+
+.benaa-glow {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -80px;
+    top: -100px;
+    border-radius: 50%;
+    background: rgba(245,158,11,0.1);
+    filter: blur(70px);
+    animation: benoGlow 5s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.coming-soon-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f59e0b !important;
+}
+
+.coming-soon-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 12px rgba(245,158,11,0.8);
+    animation: benoPulse 1.8s ease-in-out infinite;
+}
+
+.coming-soon-card .featured-project-arrow {
+    color: #f59e0b;
+}
+
+@keyframes benoGlow {
+    from {
+        opacity: 0.4;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 0.85;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes benoPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
+}
+
+
+/* =========================================
+   ALL PROJECTS SECTION
+========================================= */
+
+.all-projects-section {
+    position: relative;
+}
+
+.all-projects-heading {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BENAA - ALL PROJECTS COMING SOON
+========================================= */
+
+.project-image-coming-soon {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image-coming-soon::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background: linear-gradient(
+        115deg,
+        transparent 35%,
+        rgba(245,158,11,0.08) 48%,
+        rgba(245,158,11,0.22) 50%,
+        rgba(245,158,11,0.08) 52%,
+        transparent 65%
+    );
+    transform: translateX(-100%);
+    animation: benoShimmer 5s ease-in-out infinite;
+}
+
+.project-image-coming-soon .project-icon {
+    position: relative;
+    z-index: 2;
+    animation: benoFloat 4s ease-in-out infinite;
+}
+
+.project-coming-soon {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    white-space: nowrap;
+    padding: 7px 12px;
+    border: 1px solid rgba(245,158,11,0.25);
+    border-radius: 50px;
+    background: rgba(15,15,15,0.65);
+    backdrop-filter: blur(10px);
+    color: #f59e0b;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.project-link-disabled {
+    opacity: 0.55;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+@keyframes benoShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50%, 100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes benoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    .featured-projects-grid {
+        gap: 16px;
+    }
+
+    .featured-project-card {
+        padding: 22px;
+        min-height: 165px;
+        gap: 16px;
+    }
+
+    .featured-project-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 18px;
+        font-size: 1.8rem;
+    }
+
+    .featured-project-info h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .featured-project-card {
+        min-height: 145px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .featured-project-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+        font-size: 1.6rem;
+    }
+
+    .featured-project-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .featured-project-info p {
+        font-size: 0.82rem;
+    }
+
+    .featured-project-arrow {
+        top: 16px;
+        right: 16px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .featured-project-label {
+        font-size: 0.62rem;
+        letter-spacing: 1.4px;
+    }
+
+    .featured-heading h2,
+    .all-projects-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .featured-projects-section {
+        margin-bottom: 60px;
+    }
+}
+
+
+/* ACCESSIBILITY - REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .featured-project-card,
+    .featured-project-icon,
+    .featured-project-arrow,
+    .benaa-glow,
+    .coming-soon-dot,
+    .project-image-coming-soon::before,
+    .project-image-coming-soon .project-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
     </style>
 
 </head>
@@ -2948,13 +3393,8 @@
     <div class="container">
 
         <div class="section-heading reveal">
-
-            <span
-                class="eyebrow"
-                data-i18n="portfolio">
-
+            <span class="eyebrow" data-i18n="portfolio">
                 Portfolio
-
             </span>
 
             <h2 data-i18n="projectsTitle">
@@ -2962,887 +3402,451 @@
             </h2>
 
             <p data-i18n="projectsIntro">
-
                 A selection of games, websites and applications
                 I've designed and developed.
-
             </p>
+        </div>
 
+        <!-- FEATURED PROJECTS -->
+        <div class="featured-projects-section reveal">
+            <div class="featured-heading">
+                <span class="eyebrow">Selected Work</span>
+                <h2>Featured Projects</h2>
+                <p>Projects that represent some of my favorite work.</p>
+            </div>
+
+            <div class="featured-projects-grid">
+
+                <!-- GAMEVERSE -->
+                <a href="https://gameverse-sandy.vercel.app/"
+                   target="_blank"
+                   class="featured-project-card featured-gameverse">
+                    <div class="featured-project-icon">🎮</div>
+                    <div class="featured-project-info">
+                        <span class="featured-project-label">Featured App</span>
+                        <h3>GameVerse</h3>
+                        <p>An offline gaming platform bringing multiple games together.</p>
+                    </div>
+                    <span class="featured-project-arrow">↗</span>
+                </a>
+
+                <!-- VORA MAGAZINE -->
+                <a href="https://vora.rf.gd"
+                   target="_blank"
+                   class="featured-project-card featured-vora">
+                    <div class="featured-project-icon">📰</div>
+                    <div class="featured-project-info">
+                        <span class="featured-project-label">Featured Website</span>
+                        <h3>Vora Magazine</h3>
+                        <p>A digital magazine for stories, ideas and articles.</p>
+                    </div>
+                    <span class="featured-project-arrow">↗</span>
+                </a>
+
+                <!-- LAMMA -->
+                <a href="https://lamma.is-local.host/"
+                   target="_blank"
+                   class="featured-project-card featured-lamma">
+                    <div class="featured-project-icon">👥</div>
+                    <div class="featured-project-info">
+                        <span class="featured-project-label">Featured App</span>
+                        <h3>Lamma</h3>
+                        <p>A platform for communication, communities and sharing.</p>
+                    </div>
+                    <span class="featured-project-arrow">↗</span>
+                </a>
+
+                <!-- CONNECT -->
+                <a href="https://connect-61on.onrender.com/"
+                   target="_blank"
+                   class="featured-project-card featured-connect">
+                    <div class="featured-project-icon">🔗</div>
+                    <div class="featured-project-info">
+                        <span class="featured-project-label">Featured App</span>
+                        <h3>Connect</h3>
+                        <p>A digital platform designed to bring people and connections together.</p>
+                    </div>
+                    <span class="featured-project-arrow">↗</span>
+                </a>
+
+                <!-- BENAA -->
+                <div class="featured-project-card featured-benaa coming-soon-card">
+                    <div class="benaa-glow"></div>
+                    <div class="featured-project-icon">🏗️</div>
+                    <div class="featured-project-info">
+                        <span class="featured-project-label coming-soon-label">
+                            <span class="coming-soon-dot"></span>
+                            COMING SOON
+                        </span>
+                        <h3>Benaa</h3>
+                        <p>Something new is taking shape. A new experience is on its way.</p>
+                    </div>
+                    <span class="featured-project-arrow">✦</span>
+                </div>
+
+            </div>
         </div>
 
 
-        <div class="project-filter reveal">
+        <!-- ALL PROJECTS -->
+        <div class="all-projects-section">
 
-            <button
-                class="filter-btn active"
-                data-filter="all">
+            <div class="all-projects-heading reveal">
+                <span class="eyebrow">Complete Collection</span>
+                <h2>All Projects</h2>
+                <p>Explore all my games, websites and applications.</p>
+            </div>
 
-                All
+            <div class="project-filter reveal">
 
-            </button>
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
 
-            <button
-                class="filter-btn"
-                data-filter="game">
+                <button class="filter-btn" data-filter="game">
+                    Games
+                </button>
 
-                Games
+                <button class="filter-btn" data-filter="web">
+                    Websites
+                </button>
 
-            </button>
+                <button class="filter-btn" data-filter="app">
+                    Apps
+                </button>
 
-            <button
-                class="filter-btn"
-                data-filter="web">
-
-                Websites
-
-            </button>
-
-            <button
-                class="filter-btn"
-                data-filter="app">
-
-                Apps
-
-            </button>
-
-        </div>
+            </div>
 
 
-        <div class="projects-grid">
+            <div class="projects-grid">
 
-
-            <!-- THRONE OF SHADOWS -->
-
-            <article
-                class="card project-card reveal"
-                data-category="game">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        👑
+                <!-- THRONE OF SHADOWS -->
+                <article class="card project-card reveal" data-category="game">
+                    <div class="project-image">
+                        <div class="project-icon">👑</div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Throne of Shadows
-                    </h3>
-
-                    <p>
-                        A dark fantasy RPG where Hugo enters the
-                        Great Tournament to fight for the throne
-                        and change his fate.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Story Driven
-                        </span>
-
-                        <span class="tag">
-                            Tactical Battles
-                        </span>
-
-                        <span class="tag">
-                            RPG
-                        </span>
-
-                        <span class="tag">
-                            Strategy
-                        </span>
-
-                        <span class="tag">
-                            Dark Fantasy
-                        </span>
-
-                        <span class="tag">
-                            Choices Matter
-                        </span>
-
+                    <div class="project-body">
+                        <h3>Throne of Shadows</h3>
+                        <p>A dark fantasy RPG where Hugo enters the Great Tournament to fight for the throne and change his fate.</p>
+                        <div class="tags">
+                            <span class="tag">Story Driven</span>
+                            <span class="tag">Tactical Battles</span>
+                            <span class="tag">RPG</span>
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Dark Fantasy</span>
+                            <span class="tag">Choices Matter</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehab-dev-7.itch.io/throne-of-shadows" class="project-link">Game Page</a>
+                            <a href="https://shehab-dev-7.itch.io/throne-of-shadows" class="project-link">Details</a>
+                        </div>
                     </div>
+                </article>
 
 
-                    <div class="project-links">
-
-                        <a href="https://shehab-dev-7.itch.io/throne-of-shadows" class="project-link">
-                            Game Page
-                        </a>
-
-                        <a href="https://shehab-dev-7.itch.io/throne-of-shadows" class="project-link">
-                            Details
-                        </a>
-
+                <!-- FOOTBALL SIMULATOR -->
+                <article class="card project-card reveal" data-category="game">
+                    <div class="project-image">
+                        <div class="project-icon">⚽</div>
                     </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- FOOTBALL SIMULATOR -->
-
-            <article
-                class="card project-card reveal"
-                data-category="game">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        ⚽
+                    <div class="project-body">
+                        <h3>Football Simulator</h3>
+                        <p>A football simulation experience focused on competitive matches, tactical decisions, team control and realistic gameplay.</p>
+                        <div class="tags">
+                            <span class="tag">Football</span>
+                            <span class="tag">Simulation</span>
+                            <span class="tag">Competitive</span>
+                            <span class="tag">Tactical</span>
+                            <span class="tag">Sports</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehab-dev-7.itch.io/football-simulator" class="project-link">Play</a>
+                            <a href="https://shehab-dev-7.itch.io/football-simulator" class="project-link">Details</a>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Football Simulator
-                    </h3>
-
-                    <p>
-                        A football simulation experience focused
-                        on competitive matches, tactical decisions,
-                        team control and realistic gameplay.
-                    </p>
+                </article>
 
 
-                    <div class="tags">
-
-                        <span class="tag">
-                            Football
-                        </span>
-
-                        <span class="tag">
-                            Simulation
-                        </span>
-
-                        <span class="tag">
-                            Competitive
-                        </span>
-
-                        <span class="tag">
-                            Tactical
-                        </span>
-
-                        <span class="tag">
-                            Sports
-                        </span>
-
+                <!-- PIXEL KICK -->
+                <article class="card project-card reveal" data-category="game">
+                    <div class="project-image">
+                        <div class="project-icon">🥅</div>
                     </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://shehab-dev-7.itch.io/football-simulator" class="project-link">
-                            Play
-                        </a>
-
-                        <a href="https://shehab-dev-7.itch.io/football-simulator" class="project-link">
-                            Details
-                        </a>
-
+                    <div class="project-body">
+                        <h3>Pixel Kick</h3>
+                        <p>A fast-paced pixel-art football duel designed around local multiplayer, quick reactions and arcade competition.</p>
+                        <div class="tags">
+                            <span class="tag">Pixel Art</span>
+                            <span class="tag">2 Players</span>
+                            <span class="tag">Arcade</span>
+                            <span class="tag">Local Multiplayer</span>
+                            <span class="tag">Physics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehab-dev-7.itch.io/pixel-kick" class="project-link">Play</a>
+                            <a href="https://shehab-dev-7.itch.io/pixel-kick" class="project-link">Details</a>
+                        </div>
                     </div>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- PIXEL KICK -->
-
-            <article
-                class="card project-card reveal"
-                data-category="game">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        🥅
+                <!-- CYBERFLIP -->
+                <article class="card project-card reveal" data-category="game">
+                    <div class="project-image">
+                        <div class="project-icon">🕹</div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Pixel Kick
-                    </h3>
-
-                    <p>
-                        A fast-paced pixel-art football duel
-                        designed around local multiplayer,
-                        quick reactions and arcade competition.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Pixel Art
-                        </span>
-
-                        <span class="tag">
-                            2 Players
-                        </span>
-
-                        <span class="tag">
-                            Arcade
-                        </span>
-
-                        <span class="tag">
-                            Local Multiplayer
-                        </span>
-
-                        <span class="tag">
-                            Physics
-                        </span>
-
+                    <div class="project-body">
+                        <h3>CyberFlip</h3>
+                        <p>A futuristic endless runner built around fast arcade gameplay, reflexes and an ever-increasing challenge.</p>
+                        <div class="tags">
+                            <span class="tag">Endless Runner</span>
+                            <span class="tag">Arcade</span>
+                            <span class="tag">High Score</span>
+                            <span class="tag">Futuristic</span>
+                            <span class="tag">Reflex</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehab-dev-7.itch.io/cyberflip" class="project-link">Play</a>
+                            <a href="https://shehab-dev-7.itch.io/cyberflip" class="project-link">Details</a>
+                        </div>
                     </div>
+                </article>
 
 
-                    <div class="project-links">
-
-                        <a href="https://shehab-dev-7.itch.io/pixel-kick" class="project-link">
-                            Play
-                        </a>
-
-                        <a href="https://shehab-dev-7.itch.io/pixel-kick" class="project-link">
-                            Details
-                        </a>
-
+                <!-- ENNABI GRILL -->
+                <article class="card project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">🍽</div>
                     </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- CYBERFLIP -->
-
-            <article
-                class="card project-card reveal"
-                data-category="game">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        🕹
+                    <div class="project-body">
+                        <h3>Ennabi Grill</h3>
+                        <p>A modern experimental restaurant website designed to present the restaurant, menu, featured dishes and customer experience.</p>
+                        <div class="tags">
+                            <span class="tag">Restaurant</span>
+                            <span class="tag">Food Menu</span>
+                            <span class="tag">Modern UI</span>
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Landing Page</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ennabi-grills.netlify.app/" class="project-link">Visit</a>
+                            <a href="https://ennabi-grills.netlify.app/" class="project-link">Preview</a>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        CyberFlip
-                    </h3>
-
-                    <p>
-                        A futuristic endless runner built around
-                        fast arcade gameplay, reflexes and an
-                        ever-increasing challenge.
-                    </p>
+                </article>
 
 
-                    <div class="tags">
-
-                        <span class="tag">
-                            Endless Runner
-                        </span>
-
-                        <span class="tag">
-                            Arcade
-                        </span>
-
-                        <span class="tag">
-                            High Score
-                        </span>
-
-                        <span class="tag">
-                            Futuristic
-                        </span>
-
-                        <span class="tag">
-                            Reflex
-                        </span>
-
+                <!-- EMOGO -->
+                <article class="card project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">😀</div>
                     </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://shehab-dev-7.itch.io/cyberflip" class="project-link">
-                            Play
-                        </a>
-
-                        <a href="https://shehab-dev-7.itch.io/cyberflip" class="project-link">
-                            Details
-                        </a>
-
+                    <div class="project-body">
+                        <h3>EmoGo</h3>
+                        <p>A simple and fast emoji-copying website that helps users browse, discover and copy emojis instantly.</p>
+                        <div class="tags">
+                            <span class="tag">Emoji Library</span>
+                            <span class="tag">Instant Copy</span>
+                            <span class="tag">Search</span>
+                            <span class="tag">Categories</span>
+                            <span class="tag">Favorites</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehabsaad71.github.io/emoji/" class="project-link">Open</a>
+                            <a href="https://shehabsaad71.github.io/emoji/" class="project-link">Preview</a>
+                        </div>
                     </div>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- ENNABI GRILL -->
-
-            <article
-                class="card project-card reveal"
-                data-category="web">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        🍽
+                <!-- VORA MAGAZINE -->
+                <article class="card project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">📰</div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Ennabi Grill
-                    </h3>
-
-                    <p>
-                        A modern experimental restaurant website
-                        designed to present the restaurant, menu,
-                        featured dishes and customer experience.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Restaurant
-                        </span>
-
-                        <span class="tag">
-                            Food Menu
-                        </span>
-
-                        <span class="tag">
-                            Modern UI
-                        </span>
-
-                        <span class="tag">
-                            Responsive
-                        </span>
-
-                        <span class="tag">
-                            Landing Page
-                        </span>
-
+                    <div class="project-body">
+                        <h3>Vora Magazine</h3>
+                        <p>A digital magazine showcasing articles, ideas and stories through a clean reading experience.</p>
+                        <div class="tags">
+                            <span class="tag">Online Magazine</span>
+                            <span class="tag">Articles</span>
+                            <span class="tag">Digital Publishing</span>
+                            <span class="tag">Editorial Design</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://vora.rf.gd" class="project-link">Visit</a>
+                            <a href="https://vora.rf.gd/about" class="project-link">Details</a>
+                        </div>
                     </div>
+                </article>
 
 
-                    <div class="project-links">
-
-                        <a href="https://ennabi-grills.netlify.app/" class="project-link">
-                            Visit
-                        </a>
-
-                        <a href="https://ennabi-grills.netlify.app/" class="project-link">
-                            Preview
-                        </a>
-
+                <!-- AZEM ALQURAN -->
+                <article class="card project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">📖</div>
                     </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- EMOGO -->
-
-            <article
-                class="card project-card reveal"
-                data-category="web">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        😀
+                    <div class="project-body">
+                        <h3>Azem Alquran</h3>
+                        <p>An Islamic website designed to provide a clean and peaceful digital experience for Quran and Islamic content.</p>
+                        <div class="tags">
+                            <span class="tag">Islamic</span>
+                            <span class="tag">Quran</span>
+                            <span class="tag">Arabic</span>
+                            <span class="tag">Spiritual</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://azemalquran.netlify.app/" class="project-link">Visit</a>
+                            <a href="https://azemalquran.netlify.app/" class="project-link">Preview</a>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        EmoGo
-                    </h3>
-
-                    <p>
-                        A simple and fast emoji-copying website
-                        that helps users browse, discover and
-                        copy emojis instantly.
-                    </p>
+                </article>
 
 
-                    <div class="tags">
-
-                        <span class="tag">
-                            Emoji Library
-                        </span>
-
-                        <span class="tag">
-                            Instant Copy
-                        </span>
-
-                        <span class="tag">
-                            Search
-                        </span>
-
-                        <span class="tag">
-                            Categories
-                        </span>
-
-                        <span class="tag">
-                            Favorites
-                        </span>
-
+                <!-- SHEHAB ONLINE SHOP -->
+                <article class="card project-card reveal" data-category="web">
+                    <div class="project-image">
+                        <div class="project-icon">🛒</div>
                     </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://shehabsaad71.github.io/emoji/" class="project-link">
-                            Open
-                        </a>
-
-                        <a href="https://shehabsaad71.github.io/emoji/" class="project-link">
-                            Preview
-                        </a>
-
+                    <div class="project-body">
+                        <h3>Shehab Online Shop</h3>
+                        <p>An experimental e-commerce experience featuring product browsing, categories, product cards and a modern shopping interface.</p>
+                        <div class="tags">
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">Product Catalog</span>
+                            <span class="tag">Shopping UI</span>
+                            <span class="tag">Product Search</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehabsaad71.github.io/online-shop/" class="project-link">Visit</a>
+                            <a href="https://shehabsaad71.github.io/online-shop/" class="project-link">Preview</a>
+                        </div>
                     </div>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- VORA MAGAZINE -->
-
-            <article
-                class="card project-card reveal"
-                data-category="web">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        📰
+                <!-- GAMEVERSE -->
+                <article class="card project-card reveal" data-category="app">
+                    <div class="project-image">
+                        <div class="project-icon">🎮</div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Vora Magazine
-                    </h3>
-
-                    <p>
-                        A digital magazine showcasing articles,
-                        ideas and stories through a clean reading
-                        experience.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Online Magazine
-                        </span>
-
-                        <span class="tag">
-                            Articles
-                        </span>
-
-                        <span class="tag">
-                            Digital Publishing
-                        </span>
-
-                        <span class="tag">
-                            Editorial Design
-                        </span>
-
-                        <span class="tag">
-                            Responsive
-                        </span>
-
+                    <div class="project-body">
+                        <h3>GameVerse</h3>
+                        <p>An offline gaming platform that brings multiple mini-games together in one place.</p>
+                        <div class="tags">
+                            <span class="tag">Offline Games</span>
+                            <span class="tag">Puzzles & Strategy</span>
+                            <span class="tag">Arcade & Sports</span>
+                            <span class="tag">Play Anywhere</span>
+                            <span class="tag">Web Technologies</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://gameverse-sandy.vercel.app/" class="project-link">App</a>
+                            <a href="https://gameverse-sandy.vercel.app/" class="project-link">Details</a>
+                        </div>
                     </div>
+                </article>
 
 
-                    <div class="project-links">
-
-                        <a href="https://vora.rf.gd" class="project-link">
-                            Visit
-                        </a>
-
-                        <a href="https://vora.rf.gd/about" class="project-link">
-                            Details
-                        </a>
-
+                <!-- READLY -->
+                <article class="card project-card reveal" data-category="app">
+                    <div class="project-image">
+                        <div class="project-icon">📚</div>
                     </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- AZEM ALQURAN -->
-
-            <article
-                class="card project-card reveal"
-                data-category="web">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        📖
+                    <div class="project-body">
+                        <h3>Readly</h3>
+                        <p>A modern PDF reading experience focused on accessibility, comfortable reading and text-to-speech playback.</p>
+                        <div class="tags">
+                            <span class="tag">PDF Reader</span>
+                            <span class="tag">Text-to-Speech</span>
+                            <span class="tag">Accessibility</span>
+                            <span class="tag">Reading</span>
+                            <span class="tag">Productivity</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shehabsaad71.github.io/readly-website/" class="project-link">App</a>
+                            <a href="https://shehabsaad71.github.io/readly-website/" class="project-link">Details</a>
+                        </div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Azem Alquran
-                    </h3>
-
-                    <p>
-                        An Islamic website designed to provide
-                        a clean and peaceful digital experience
-                        for Quran and Islamic content.
-                    </p>
+                </article>
 
 
-                    <div class="tags">
-
-                        <span class="tag">
-                            Islamic
-                        </span>
-
-                        <span class="tag">
-                            Quran
-                        </span>
-
-                        <span class="tag">
-                            Arabic
-                        </span>
-
-                        <span class="tag">
-                            Spiritual
-                        </span>
-
-                        <span class="tag">
-                            Responsive
-                        </span>
-
+                <!-- LAMMA -->
+                <article class="card project-card reveal" data-category="app">
+                    <div class="project-image">
+                        <div class="project-icon">👥</div>
                     </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://azemalquran.netlify.app/" class="project-link">
-                            Visit
-                        </a>
-
-                        <a href="https://azemalquran.netlify.app/" class="project-link">
-                            Preview
-                        </a>
-
+                    <div class="project-body">
+                        <h3>Lamma</h3>
+                        <p>A modern digital platform designed to bring people together through seamless communication, community interaction, and content sharing</p>
+                        <div class="tags">
+                            <span class="tag">Multiplayer Game</span>
+                            <span class="tag">Communication</span>
+                            <span class="tag">Social Networking</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">Content Sharing</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://lamma.is-local.host/" class="project-link">App</a>
+                            <a href="https://lamma.is-local.host/" class="project-link">Details</a>
+                        </div>
                     </div>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- SHEHAB ONLINE SHOP -->
-
-            <article
-                class="card project-card reveal"
-                data-category="web">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        🛒
+                <!-- CONNECT -->
+                <article class="card project-card reveal" data-category="app">
+                    <div class="project-image">
+                        <div class="project-icon">🔗</div>
                     </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Shehab Online Shop
-                    </h3>
-
-                    <p>
-                        An experimental e-commerce experience
-                        featuring product browsing, categories,
-                        product cards and a modern shopping interface.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            E-Commerce
-                        </span>
-
-                        <span class="tag">
-                            Product Catalog
-                        </span>
-
-                        <span class="tag">
-                            Shopping UI
-                        </span>
-
-                        <span class="tag">
-                            Product Search
-                        </span>
-
-                        <span class="tag">
-                            Responsive
-                        </span>
-
+                    <div class="project-body">
+                        <h3>Connect</h3>
+                        <p>A digital platform designed to bring people together through communication, connections and an engaging social experience.</p>
+                        <div class="tags">
+                            <span class="tag">Social Platform</span>
+                            <span class="tag">Community</span>
+                            <span class="tag">Connections</span>
+                            <span class="tag">Web App</span>
+                            <span class="tag">Interactive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://connect-61on.onrender.com/" class="project-link">App</a>
+                            <a href="https://connect-61on.onrender.com/" class="project-link">Visit</a>
+                        </div>
                     </div>
+                </article>
 
 
-                    <div class="project-links">
-
-                        <a href="https://shehabsaad71.github.io/online-shop/" class="project-link">
-                            Visit
-                        </a>
-
-                        <a href="https://shehabsaad71.github.io/online-shop/" class="project-link">
-                            Preview
-                        </a>
-
+                <!-- BENAA -->
+                <article class="card project-card reveal" data-category="app">
+                    <div class="project-image project-image-coming-soon">
+                        <div class="project-icon">🏗️</div>
+                        <span class="project-coming-soon">COMING SOON</span>
                     </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- GAMEVERSE -->
-
-            <article
-                class="card project-card reveal"
-                data-category="app">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        🎮
+                    <div class="project-body">
+                        <h3>Benaa | بناء</h3>
+                        <p>A new project is taking shape. Stay tuned for something built with a vision.</p>
+                        <div class="tags">
+                            <span class="tag">Coming Soon</span>
+                            <span class="tag">In Development</span>
+                            <span class="tag">New Experience</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link project-link-disabled">Coming Soon</span>
+                        </div>
                     </div>
+                </article>
 
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        GameVerse
-                    </h3>
-
-                    <p>
-                        An offline gaming platform that brings multiple mini-games together in one place.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Offline Games
-                        </span>
-
-                        <span class="tag">
-                            Puzzles & Strategy
-                        </span>
-
-                        <span class="tag">
-                            Arcade & Sports
-                        </span>
-
-                        <span class="tag">
-                            Play Anywhere
-                        </span>
-
-                        <span class="tag">
-                            Web Technologies
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://gameverse-sandy.vercel.app/" class="project-link">
-                            App
-                        </a>
-
-                        <a href="https://gameverse-sandy.vercel.app/" class="project-link">
-                            Details
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- READLY -->
-
-            <article
-                class="card project-card reveal"
-                data-category="app">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        📚
-                    </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Readly
-                    </h3>
-
-                    <p>
-                        A modern PDF reading experience focused
-                        on accessibility, comfortable reading and
-                        text-to-speech playback.
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            PDF Reader
-                        </span>
-
-                        <span class="tag">
-                            Text-to-Speech
-                        </span>
-
-                        <span class="tag">
-                            Accessibility
-                        </span>
-
-                        <span class="tag">
-                            Reading
-                        </span>
-
-                        <span class="tag">
-                            Productivity
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://shehabsaad71.github.io/readly-website/" class="project-link">
-                            App
-                        </a>
-
-                        <a href="https://shehabsaad71.github.io/readly-website/" class="project-link">
-                            Details
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-            <article
-                class="card project-card reveal"
-                data-category="app">
-
-                <div class="project-image">
-
-                    <div class="project-icon">
-                        👥
-                    </div>
-
-                </div>
-
-
-                <div class="project-body">
-
-                    <h3>
-                        Lamma
-                    </h3>
-
-                    <p>
-                        A modern digital platform designed to bring people together through seamless communication, 
-                        community interaction, and content sharing
-                    </p>
-
-
-                    <div class="tags">
-
-                        <span class="tag">
-                            Multiplayer Game
-                        </span>
-
-                        <span class="tag">Communication</span>
-                        <span class="tag">Social Networking</span>
-                        <span class="tag">Community</span>
-                        <span class="tag">Content Sharing</span>
-
-                    </div>
-
-
-                    <div class="project-links">
-
-                        <a href="https://lamma.is-local.host/" class="project-link">
-                            App
-                        </a>
-
-                        <a href="https://lamma.is-local.host/" class="project-link">
-                            Details
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
+            </div>
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
